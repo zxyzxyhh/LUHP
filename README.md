@@ -9,14 +9,12 @@ Include:
 >The datasets used in the repository should be downloaded under the Dataset folder with corresponding data and their data_lists.
 ---
 ### Requirements
-	<ul>
-	<li>pytorch 1.7.1</li>
-	<li>numpy 1.21.2</li>
-	<li>torchvision 0.8.2</li>
-	<li>tqdm 4.62.3</li>
-	<li>timm 0.4.12</li>
-	<li>scikit-learn 1.0.2</li>
-	</ul>
+	pytorch 1.7.1
+	numpy 1.21.2
+	torchvision 0.8.2
+	tqdm 4.62.3
+	timm 0.4.12
+	scikit-learn 1.0.2
 ---
 ### Training
 Using the `LUHP_Office.py` for training on Office31 dataset can be found below.
@@ -50,6 +48,20 @@ Generally, all scripts in the project take the following flags
 - `--log`: path of the run log.
 - `-i`: iterations per epoch
 ---
+
+### Results
+| Method | DomainNet | OfficeHome | VisDA2017 |
+| :-----:| :-----:| :----: | :----: | 
+| ResNet | 62.5 | 46.1 | 52.4 |
+| DANN | 74.5 | 57.6 | 57.4 |
+| BNM | - | 69.4 | 70.4 |
+| ATDOC | - | 72.2 | 80.3 |
+| DALN | - | 71.8 | 80.6 |
+| BIWAA-I | 79.4 | 71.5 | - |
+| MSGD | - |  72.4 | 84.5 |
+| LUHP (ours)| 82.0| 75.4 | 84.6 |
+| LUHP + Aug (ours)| 83.2 | 75.7 | 86.3 |
+
 ### Acknowledgement
 Our implementation is based on the Transfer Learning Library.
 
